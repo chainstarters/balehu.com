@@ -109,20 +109,6 @@ section {
   }
 }
 
-// Header //
-header {
-  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
-  background-size: cover;
-  color: #FFFFFF;
-
-  @media screen and (min-width: 1020px) {
-    h1 {
-      margin: 2.5em 0 4em;
-      line-height: 1.4;
-    }
-  }
-}
-
 // Footer //
 footer {
   .menu_list {
