@@ -6,4 +6,98 @@
 
 {% block content %}
 <link rel="stylesheet" href="/stylesheets/contact.css">
+<section class="locations bl-text--center">
+    <div class="mdc-layout-grid bl-layout-wrapper">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <h2 class="title_center">We are based in these current locations</h2>
+            </div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <ul class="locations__list">
+            <li>
+                <h3>Denver</h3>
+                <img src="../../images/location_01.png" width="204">
+            </li>
+            <li>
+                <h3>Singapore</h3>
+                <img src="../../images/location_02.png" width="204">
+            </li>
+            <li>
+                <h3>Dubai</h3>
+                <img src="../../images/location_03.png" width="204">
+            </li>
+            <li>
+                <h3>Prague</h3>
+                <img src="../../images/location_04.png" width="204">
+            </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-us">
+    <div class="bl-bgnd-wrapper">
+        <div class="mdc-layout-grid bl-layout-wrapper">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                    <h2>Send us a&nbsp;message</h2>
+                    <h3>Feel free to reach us, we will get back to you as soon as possible</h3>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+                    <div class="bl-box bl-box__inner">
+                        <form class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                                <div class="bl-form-control">
+                                    <label class="bl-form-control__label" for="firstName">First Name</label>
+                                    <input class="bl-form-control__input" id="firstName" type="text" placeholder="Enter first name" required/>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                                <div class="bl-form-control">
+                                    <label class="bl-form-control__label" for="lastName">Last Name</label>
+                                    <input class="bl-form-control__input" id="lastName" type="text" placeholder="Enter last name" required/>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                                <div class="bl-form-control">
+                                    <label class="bl-form-control__label" for="email">Email</label>
+                                    <input class="bl-form-control__input" id="email" type="email" placeholder="Enter email address" required/>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                                <div class="bl-form-control">
+                                    <label class="bl-form-control__label" for="tel">Phone Number</label>
+                                    <input class="bl-form-control__input" id="tel" type="tel" placeholder="Enter phone number"/>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                                <div class="bl-form-control">
+                                    <label class="bl-form-control__label" for="message">Message</label>
+                                    <textarea class="bl-form-control__input" id="message" placeholder="Enter message" rows="7"></textarea>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                                <button class="button" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bl-text--center">
+    <div class="mdc-layout-grid bl-layout-wrapper">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <h2 class="title_center">Contact us</h2>
+                <p class="contat-info"><a href="mailto:info@balehu.com">info@balehu.com</a></p>
+                <p class="contat-info"><a href="tel:202-555-0142">202-555-0142</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

@@ -2,3 +2,39 @@
 header {
   background-image: url("../images/bgnd_header_contact.png");
 }
+
+.locations {
+  @media screen and (min-width: 1030px) {
+    .title_center {
+      max-width: 600px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+}
+.contact-us {
+  .bl-box__inner {
+    padding: 30px;
+  }
+  @media screen and (min-width: 1030px) {
+    h3 {
+      font-size: 25px;
+    }
+    .bl-box__inner {
+      margin-top: 60px;
+      margin-left: 20px;
+      padding: 60px;
+    }
+  }
+}
+.contat-info {
+  font-size: 20px;
+  font-weight: 700;
+}
