@@ -1,4 +1,4 @@
-#balehu.com product website
+# balehu.com product website
 
 This project uses [Blendid](https://github.com/topmonks/blendid) stack.
 
