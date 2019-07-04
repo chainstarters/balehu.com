@@ -109,6 +109,26 @@ section {
   }
 }
 
+// Menu //
+
+nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu_list {
+    padding-left: 0;
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 700;
+      list-style: none;
+    }
+  }
+}
+
 // Footer //
 footer {
   .menu_list {

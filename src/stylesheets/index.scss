@@ -1,4 +1,10 @@
+// Header overriders
+header {
+  background-image: url("../images/bgnd_header.png");
+}
+
 // Tiny slider styles //
+
 .tns {
   &-nav {
     text-align: center;
@@ -43,6 +49,7 @@
 }
 
 // Revenue calculator styles //
+
 .bh-revenue {
   color: #B1AEF8;
   white-space: nowrap;
@@ -155,9 +162,4 @@
       margin-top: 14px;
     }
   }
-}
-
-// Header overriders
-header {
-  background-image: url("../images/bgnd_header.png");
 }
