@@ -1,0 +1,16 @@
+{
+  "name": "balehu.com",
+  "version": "1.0.0",
+  "description": "balehu.com website",
+  "main": "index.html",
+  "repository": "https://github.com/balehu/balehu.com.git",
+  "author": "Václav Slavík <vaclav.slavik@topmonks.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@topmonks/blendid": "git://github.com/topmonks/blendid.git"
+  },
+  "dependencies": {
+    "@material/layout-grid": "^3.0.0"
+  }
+}
