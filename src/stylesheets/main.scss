@@ -91,6 +91,11 @@ a {
   nav a:hover {
     color: #32305D;
   }
+  .hero-subtitle {
+    font-size: 25px;
+    max-width: 450px;
+    line-height: 36px;
+  }
 }
 
 @media screen and (max-width: 999px) {
@@ -107,6 +112,9 @@ a {
     max-width: 690px;
     margin: 0 auto;
     padding-bottom: 24px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
   }
 
   h2 {
