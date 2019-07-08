@@ -48,7 +48,7 @@
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
                     <div class="bl-box bl-box__inner">
-                        <form class="mdc-layout-grid__inner">
+                        <form class="mdc-layout-grid__inner" id="contactForm">
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                                 <div class="bl-form-control">
                                     <label class="bl-form-control__label" for="firstName">First Name</label>
@@ -69,8 +69,8 @@
                             </div>
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                                 <div class="bl-form-control">
-                                    <label class="bl-form-control__label" for="tel">Phone Number</label>
-                                    <input class="bl-form-control__input" id="tel" type="tel" placeholder="Enter phone number"/>
+                                    <label class="bl-form-control__label" for="phone">Phone Number</label>
+                                    <input class="bl-form-control__input" id="phone" type="tel" placeholder="Enter phone number"/>
                                 </div>
                             </div>
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -80,7 +80,8 @@
                                 </div>
                             </div>
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                                <button class="button" type="submit">Submit</button>
+                                <button class="button" id="submitBtn" type="submit">Submit</button>
+                                <p id="resultMessage" style="display:none">Message successfuly sent.</p>
                             </div>
                         </form>
                     </div>
@@ -89,6 +90,42 @@
         </div>
     </div>
 </section>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const URL = "https://xdyzal23wj.execute-api.us-east-1.amazonaws.com/default/contact-us";
+
+    const data = {
+      type: "contactUs",
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value,
+    }
+
+    const submitBtn = document.getElementById("submitBtn");
+    const resultMsg = document.getElementById("resultMessage");
+    submitBtn.textContent = "Sending...";
+    submitBtn.setAttribute("disabled", true);
+
+    fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(r => r.json()).then(resp => {
+      submitBtn.textContent = "Submit";
+      submitBtn.removeAttribute("disabled");
+      const response = "Unexpected error";
+      if (resp.ok) response = "Message sent successfully";
+      resultMsg.innerText = response;
+      resultMsg.style.display = "block";
+    })
+  });
+</script>
 
 <section class="bl-text--center">
     <div class="mdc-layout-grid bl-layout-wrapper">
