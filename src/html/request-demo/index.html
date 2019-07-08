@@ -36,7 +36,7 @@
             </div>
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 request-form">
                 <div class="bl-box__inner">
-                    <form class="mdc-layout-grid__inner">
+                    <form class="mdc-layout-grid__inner" id="contactForm">
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                             <h3 class="title_form">Allow Balehu to create a complimentary demo for you today!</h3>
                         </div>
@@ -107,7 +107,7 @@
       },
       body: JSON.stringify(data)
     }).then(r => r.json()).then(resp => {
-      submitBtn.textContent = "Submit";
+      submitBtn.textContent = "Get started";
       submitBtn.removeAttribute("disabled");
       const response = "Unexpected error";
       if (resp.ok) response = "Message sent successfully";
