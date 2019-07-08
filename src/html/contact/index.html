@@ -104,6 +104,7 @@
       message: document.getElementById("message").value,
     }
 
+
     const submitBtn = document.getElementById("submitBtn");
     const resultMsg = document.getElementById("resultMessage");
     submitBtn.textContent = "Sending...";
@@ -119,11 +120,16 @@
     }).then(r => r.json()).then(resp => {
       submitBtn.textContent = "Submit";
       submitBtn.removeAttribute("disabled");
-      const response = "Unexpected error";
-      if (resp.ok) response = "Message sent successfully";
+      resultMsg.innerText = "Message sent successfully";
+      resultMsg.style.display = "block";
+    }).catch(err => {
+      console.error(err);
+      submitBtn.textContent = "Submit";
+      submitBtn.removeAttribute("disabled");
+      const response = "Network error";
       resultMsg.innerText = response;
       resultMsg.style.display = "block";
-    })
+    });
   });
 </script>
 

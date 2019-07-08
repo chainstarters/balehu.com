@@ -109,11 +109,16 @@
     }).then(r => r.json()).then(resp => {
       submitBtn.textContent = "Get started";
       submitBtn.removeAttribute("disabled");
-      const response = "Unexpected error";
-      if (resp.ok) response = "Message sent successfully";
+      resultMsg.innerText = "Message sent successfully";
+      resultMsg.style.display = "block";
+    }).catch(err => {
+      console.error(err);
+      submitBtn.textContent = "Get started";
+      submitBtn.removeAttribute("disabled");
+      const response = "Network error";
       resultMsg.innerText = response;
       resultMsg.style.display = "block";
-    })
+    });
   });
 </script>
 </body>
