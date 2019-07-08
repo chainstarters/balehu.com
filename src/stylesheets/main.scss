@@ -141,8 +141,10 @@ a {
   padding: 20px 26px;
   box-shadow: 0px 14.4697px 43.4091px rgba(138, 130, 219, 0.2);
   border: none;
+  transition: background-color 0.5s ease;
 
   &:hover {
+    color: #ffffff;
     background-color: rebeccapurple;
     cursor: pointer;
   }
