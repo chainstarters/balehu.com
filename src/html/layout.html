@@ -17,6 +17,8 @@
 
   <link rel="stylesheet" href="/stylesheets/main.css">
   <link rel="stylesheet" href="/stylesheets/header.css">
+  {% block head %}{% endblock %}
+  {% include "shared/app-icons.html" %}
 </head>
 <body>
 <header>
@@ -44,7 +46,7 @@
           <ul class="menu_list">
             <li><a href="/">Home</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/demo-request">Get started for free</a></li>
+            <li><a href="/request-demo">Get started for free</a></li>
           </ul>
         </nav>
       </div>
@@ -114,7 +116,7 @@
               <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="/demo-request">Get started for free</a>
+              <a href="/request-demo">Get started for free</a>
             </li>
           </ul>
         </nav>
