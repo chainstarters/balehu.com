@@ -1,0 +1,14 @@
+.movement {
+  .hero-subtitle {
+    text-align: center;
+    margin: 0 auto;
+    @media screen and (min-width: 1000px) {
+      width: 1045px;
+    }
+  }
+
+  .grey-text {
+    text-align: center;
+    width: 267px;
+  }
+}

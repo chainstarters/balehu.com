@@ -1,0 +1,21 @@
+.benefits {
+  .bl-box {
+    text-align: center;
+
+    h3 {
+      font-size: 26px;
+      @media screen and (max-width: 999px) {
+        font-size: 20px;
+
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #B4B4B4;
+      line-height: 22px;
+      min-height: 120px;
+      padding: 0 34px;
+    }
+  }
+}

@@ -39,10 +39,14 @@ a {
     color: #C36DE6;
   }
 }
+.grey-text {
+    font-size: 18px;
+    color: #B4B4B4;
+}
 
 
 .gp-layout-wrapper {
-  max-width: 1030px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -84,7 +88,7 @@ header {
   }
   .title_center {
     text-align: center;
-    max-width: 690px;
+    max-width: 724px;
     margin: 0 auto;
   }
 
@@ -98,7 +102,7 @@ header {
   }
   .hero-subtitle {
     font-size: 25px;
-    max-width: 450px;
+    font-weight: 700;
     line-height: 36px;
   }
 }
@@ -126,6 +130,9 @@ header {
     font-size: 24px;
   }
   h3 {
+    font-size: 20px;
+  }
+  .benefits .bl-box h3 {
     font-size: 20px;
   }
   p {
