@@ -1,14 +1,34 @@
 .movement {
+  text-align: center;
   .hero-subtitle {
-    text-align: center;
     margin: 0 auto;
     @media screen and (min-width: 1000px) {
       width: 1045px;
     }
   }
+  .movement_box {
+    margin-top: 24px;
+  }
 
   .grey-text {
     text-align: center;
     width: 267px;
+    margin: 24px auto;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 840px) {
+    img {
+      width: 232px;
+      height: 232px;
+    }
+  }
+  @media (max-width: 839px) {
+    img {
+      width: 100%;
+    }
   }
 }

@@ -13,6 +13,7 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 1.4;
+  background: url("../images/gump/change-bgnd_icon.svg") top right;
 }
 
 textarea {
@@ -52,10 +53,6 @@ a {
 
 .gp-bgnd-wrapper {
   background-color: #F8F8F8;
-}
-
-header {
-  background: linear-gradient(25.21deg, #00DED3 4.65%, #09B1D8 15.32%, #1865E2 34.83%, #2135E8 48.77%, #2523EA 55.69%, #3E1FE7 60.19%, #A30EDC 79.22%, #E304D5 92.45%, #FC00D2 98.66%);;
 }
 
 .bl-text {
@@ -185,6 +182,10 @@ nav {
 // Footer //
 footer {
   .menu_list {
+    &:before {
+      background: url("../images/gump/icon_spare-change.svg") center;
+      width: 100%;
+    }
     @media screen and (max-width: 870px) {
       display: block;
       text-align: center;
