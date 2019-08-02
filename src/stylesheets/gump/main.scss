@@ -40,9 +40,10 @@ a {
     color: #C36DE6;
   }
 }
+
 .grey-text {
-    font-size: 18px;
-    color: #B4B4B4;
+  font-size: 18px;
+  color: #B4B4B4;
 }
 
 
@@ -137,6 +138,14 @@ a {
   }
 }
 
+// Badges //
+.badges img {
+  @media (max-width: 839px) {
+    width: 192px;
+    height: 68px;
+  }
+}
+
 // Buttons //
 .button {
   display: inline-block;
@@ -186,6 +195,7 @@ footer {
       background: url("../images/gump/icon_spare-change.svg") center;
       width: 100%;
     }
+
     @media screen and (max-width: 870px) {
       display: block;
       text-align: center;
