@@ -1,8 +1,9 @@
 .movement {
   text-align: center;
+  background: linear-gradient(180deg, #F8F8F8 40%, #fff 0%);
   .hero-subtitle {
     margin: 0 auto;
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1050px) {
       width: 1045px;
     }
   }
@@ -27,6 +28,8 @@
     }
   }
   @media (max-width: 839px) {
+    background: linear-gradient(180deg, #F8F8F8 32%, #fff 0%);
+
     img {
       width: 100%;
     }
