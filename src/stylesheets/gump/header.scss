@@ -1,7 +1,7 @@
 header {
   color: #FFFFFF;
   position: relative;
-  background: linear-gradient(25.21deg, #00DED3 4.65%, #09B1D8 15.32%, #1865E2 34.83%, #2135E8 48.77%, #2523EA 55.69%, #3E1FE7 60.19%, #A30EDC 79.22%, #E304D5 92.45%, #FC00D2 98.66%);;
+  background: linear-gradient(25.21deg, #00DED3 4.65%, #09B1D8 15.32%, #1865E2 34.83%, #2135E8 48.77%, #2523EA 55.69%, #3E1FE7 60.19%, #A30EDC 79.22%, #E304D5 92.45%, #FC00D2 98.66%);
 
   .menu_list a,
   .logo {
@@ -23,6 +23,8 @@ header {
     }
   }
   @media screen and (min-width: 1000px) {
+    background: url("/images/gump/change-bgnd_icon.png") right center no-repeat, linear-gradient(25.21deg, #00DED3 4.65%, #09B1D8 15.32%, #1865E2 34.83%, #2135E8 48.77%, #2523EA 55.69%, #3E1FE7 60.19%, #A30EDC 79.22%, #E304D5 92.45%, #FC00D2 98.66%);
+    background-size: 20%, 100%;
     .hero-subtitle {
       max-width: 554px;
       line-height: 36px;
