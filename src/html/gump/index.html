@@ -18,18 +18,17 @@
     <link rel="stylesheet" href="/stylesheets/gump/main.css">
     <link rel="stylesheet" href="/stylesheets/gump/header.css">
     {% block head %}{% endblock %}
-    {% include "shared/app-icons.html" %}
 </head>
 <body>
 <header>
     <div class="mdc-layout-grid gp-layout-wrapper">
-        <div class="bl-bar mdc-layout-grid__inner">
+        <div class="gp-bar mdc-layout-grid__inner">
             <div
-                    class="bl-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet">
-                <div class="bl-hamburger__container">
-                    <div class="bl-hamburger__bar"></div>
-                    <div class="bl-hamburger__bar"></div>
-                    <div class="bl-hamburger__bar"></div>
+                    class="gp-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet">
+                <div class="gp-hamburger__container">
+                    <div class="gp-hamburger__bar"></div>
+                    <div class="gp-hamburger__bar"></div>
+                    <div class="gp-hamburger__bar"></div>
                 </div>
             </div>
             <div
@@ -62,7 +61,7 @@
             </div>
             <div
                     class="menu mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-9-desktop">
-                <nav id="nav" class="navigation bl-menu">
+                <nav id="nav" class="navigation gp-menu">
                     <ul class="menu_list">
                         <li><a href="/">Home</a></li>
                         <li><a href="/contact/">Contact</a></li>
@@ -78,9 +77,9 @@
         </div>
     </div>
     <script>
-        var appBar = document.querySelector(".bl-bar");
-        var hamburger = document.querySelector(".bl-hamburger__container");
-        var menu = document.querySelector(".bl-menu");
+        var appBar = document.querySelector(".gp-bar");
+        var hamburger = document.querySelector(".gp-hamburger__container");
+        var menu = document.querySelector(".gp-menu");
         var links = menu.getElementsByTagName("a");
         for (var i = 0, len = links.length; i < len; i++) {
             links[i].onclick = toggleMenu(hamburger);
@@ -89,8 +88,8 @@
 
         function toggleMenu() {
             return function () {
-                hamburger.classList.toggle("bl-hamburger__container--open");
-                appBar.classList.toggle("bl-bar--open");
+                hamburger.classList.toggle("gp-hamburger__container--open");
+                appBar.classList.toggle("gp-bar--open");
             };
         }
 
@@ -100,9 +99,9 @@
             if (!ticking) {
                 window.requestAnimationFrame(function () {
                     if (window.matchMedia("(min-width: 841px)").matches) {
-                        menu.classList.add("bl-menu--horizontal");
+                        menu.classList.add("gp-menu--horizontal");
                     } else {
-                        menu.classList.remove("bl-menu--horizontal");
+                        menu.classList.remove("gp-menu--horizontal");
                     }
                     ticking = false;
                 });
@@ -111,7 +110,7 @@
         });
 
         if (window.matchMedia("(min-width: 841px)").matches) {
-            menu.classList.toggle("bl-menu--horizontal");
+            menu.classList.toggle("gp-menu--horizontal");
         }
     </script>
     <div class="gp-header-bgnd mdc-layout-grid gp-layout-wrapper">
@@ -136,7 +135,7 @@
                 <h2 class="title_center">Financial Freedom Leads<br> to Mental Well-Being</h2>
             </div>
             <div
-                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet bl-layout--order-1-mobile ">
+                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet gp-layout--order-1-mobile ">
                 <div class="digital__section">
                     <h3>Roundup</h3>
                     <p class="grey-text">By automatically giving your spare change to the nearest dollar you are
@@ -232,41 +231,41 @@
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                 <h2>#GUMPmovement Benefits</h2>
             </div>
-            <div class="bl-box mdc-layout-grid__cell">
+            <div class="gp-box mdc-layout-grid__cell">
                 <img src="../images/gump/benefit_01.jpg" width="100%" height="auto">
                 <h3>Earn Financial Freedom</h3>
                 <p>The financial burden and stress of modern life are holding us back from
                     living our best lives. Your contribution will be rewarded in the form of rent,
                     food, and vacation benefits.</p>
             </div>
-            <div class="bl-box mdc-layout-grid__cell">
+            <div class="gp-box mdc-layout-grid__cell">
                 <img src="../images/gump/benefit_02.jpg" width="100%" height="auto">
                 <h3>Discover Mental Freedom</h3>
                 <p>Financial freedom affords us space for mental clarity. When we invest in our
                     own mental health, we are able to support the mental health of others.</p>
             </div>
-            <div class="bl-box mdc-layout-grid__cell">
+            <div class="gp-box mdc-layout-grid__cell">
                 <img src="../images/gump/benefit_03.jpg" width="100%" height="auto">
                 <h3>New Influencer Economy</h3>
                 <p>Our next generation of influencers will be defined as #changemakers, who
                     share their stories, promote positivity to their networks, and earn by living
                     the change we wish to&nbsp;see.</p>
             </div>
-            <div class="bl-box bl-box-margin mdc-layout-grid__cell">
+            <div class="gp-box gp-box-margin mdc-layout-grid__cell">
                 <img src="../images/gump/benefit_04.jpg" width="100%" height="auto">
                 <h3>Express Yourself</h3>
                 <p>Your digital piggy artwork is unique to your personal identity, gamifying
                     your journey to financial freedom while supporting an ecosystem of artists with
                     your local community.</p>
             </div>
-            <div class="bl-box bl-box-margin mdc-layout-grid__cell">
+            <div class="gp-box gp-box-margin mdc-layout-grid__cell">
                 <img src="../images/gump/benefit_05.jpg" width="100%" height="auto">
                 <h3>Transparent Impact</h3>
                 <p>#GUMPmovement is proud to pioneer a new way of accountability utilizing
                     blockchain technology, with a mission to be the first fully decentralized
                     nonprofit accounting for anyone to explore.</p>
             </div>
-            <div class="bl-box bl-box-margin mdc-layout-grid__cell">
+            <div class="gp-box gp-box-margin mdc-layout-grid__cell">
                 <img src="../images/gump/benefit_06.jpg" width="100%" height="auto">
                 <h3>Strength in Community</h3>
                 <p>Connect with other people within #GUMPmovement through stories, and in-person
@@ -276,7 +275,7 @@
         </div>
     </div>
 </section>
-<section class="closure bl-text--center">
+<section class="closure gp-text--center">
     <div class="mdc-layout-grid gp-layout-wrapper">
         <div class="mdc-layout-grid__inner">
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
