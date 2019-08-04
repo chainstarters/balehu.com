@@ -195,6 +195,15 @@ nav {
 
 // Tiny slider styles //
 
+.slider {
+  &:before {
+    display: block;
+    content:"";
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/gump/gump_icon.png");
+  }
+}
 .tns {
   &-nav {
     text-align: center;
