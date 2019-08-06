@@ -188,18 +188,16 @@ nav {
     }
   }
 }
+.closure .icon_bgnd {
+  background: url("/images/gump/icon-bgnd_badges.png") top center no-repeat;
+  background-size: 8%;
+  background-position-y: 70%;
+  background-position-x: 35.6%;
+  z-index: 2;
+}
 
 // Tiny slider styles //
 
-.slider {
-  &:before {
-    display: block;
-    content:"";
-    width: 140px;
-    height: 140px;
-    background-image: url("/images/gump/gump_icon.png");
-  }
-}
 .tns {
   &-nav {
     text-align: center;
@@ -240,7 +238,11 @@ nav {
     text-align: center;
     background: transparent;
     border: 0;
+    z-index: 4;
   }
+}
+.tns-outer {
+  z-index: 4;
 }
 
 
