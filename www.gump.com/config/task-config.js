@@ -1,25 +1,18 @@
-const globImporter = require("node-sass-glob-importer");
 const pathConfig = require("./path-config.json");
 
 module.exports = {
+  html: true,
   images: true,
-  fonts: true,
+  fonts: false,
   static: true,
-  svgSprite: true,
+  svgSprite: false,
+  stylesheets: true,
 
   javascripts: {
     entry: {
       app: ["./index.js"]
     }
   },
-
-  stylesheets: {
-    sass: {
-      importer: globImporter()
-    }
-  },
-
-  html: true,
 
   browserSync: {
     server: {

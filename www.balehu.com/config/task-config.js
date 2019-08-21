@@ -1,25 +1,15 @@
+const pathConfig = require("./path-config.json");
+
 module.exports = {
   html: true,
   images: true,
-  fonts: true,
+  fonts: false,
   static: true,
-  svgSprite: true,
+  svgSprite: false,
   stylesheets: true,
-
-  workboxBuild: {
-    globDirectory: './public',
-    globPatterns: [
-      '**\/*.{html,json,js,css}'
-    ],
-    // Create service-worker.js source file and define `swSrc` to use `injectManifest` method
-    // swSrc: './src/service-worker.js',
-    swDest: './public/service-worker.prod.js',
-  },
 
   javascripts: {
     entry: {
-      // files paths are relative to
-      // javascripts.dest in path-config.json
       app: ["./app.js"]
     }
   },
@@ -28,7 +18,7 @@ module.exports = {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: "public"
+      baseDir: pathConfig.dest
     }
   },
 
