@@ -12,5 +12,11 @@
   },
   "dependencies": {
     "@material/layout-grid": "^3.0.0"
+  },
+  "scripts": {
+    "start:www.balehu.com": "BLENDID_CONFIG_PATH=./www.balehu.com/config/ blendid",
+    "build:www.balehu.com": "BLENDID_CONFIG_PATH=./www.balehu.com/config/ blendid -- build",
+    "start:www.gump.com": "BLENDID_CONFIG_PATH=./www.gump.com/config/ blendid",
+    "build:www.gump.com": "BLENDID_CONFIG_PATH=./www.gump.com/config/ blendid -- build"
   }
 }

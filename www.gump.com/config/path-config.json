@@ -1,6 +1,6 @@
 {
-  "src": "./src",
-  "dest": "./public",
+  "src": "./www.gump.com/src",
+  "dest": "./public/www.gump.com",
 
   "html": {
     "src": "html",

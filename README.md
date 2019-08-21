@@ -18,16 +18,29 @@ Install dependencies
 yarn install
 ```
 
-Start local development with following command:
+We are serving two sites in this monorepo.
+
+To start local development for www.balehu.com use:
 
 ```
-yarn blendid
+yarn start:www.balehu.com
+```
+To start local development for www.gump.com use:
+
+```
+yarn start:www.gump.com
 ```
 
 ## Production build
 
-Build website to `/public` folder:
+To build www.balehu.com website to `/public` folder:
 
 ```
-yarn blendid build
+yarn build:www.balehu.com
+```
+
+To build www.gump.com website to `/public` folder:
+
+```
+yarn build:www.gump.com
 ```
