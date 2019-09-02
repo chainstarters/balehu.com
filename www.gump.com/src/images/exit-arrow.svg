@@ -1,0 +1,18 @@
+<svg width="151" height="169" viewBox="0 0 151 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+<title>[Icon] Go Back</title>
+  <g filter="url(#filter0_d)">
+<circle cx="59.7191" cy="57.7191" r="24.7191" transform="rotate(-180 59.7191 57.7191)" fill="#FAFAFA"/>
+</g>
+<path d="M62.5713 50.1133L54.9654 57.177L62.5713 65.325" stroke="#333333" stroke-width="5.70442" stroke-linecap="round"/>
+<defs>
+<filter id="filter0_d" x="-31.5516" y="-14.5368" width="182.541" height="182.541" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="19.0147"/>
+<feGaussianBlur stdDeviation="33.2758"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

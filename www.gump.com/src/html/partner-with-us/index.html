@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}GUMPchange - Partner With Us</title>
+    <link rel="icon" type="image/png" href="/images/logo-icon_favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description"
+          content="The first global roundup change app that leverages spare change to ease your financial burdens & improve your mental health.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gump.com/">
+
+    <script>WebFontConfig = {typekit: {id: "dlz5yfx"}, async: true};</script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" defer
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/contact.css">
+
+    {% block head %}{% endblock %}
+    <style>
+        body {
+            background: linear-gradient(25.21deg, #00DED3 4.65%, #09B1D8 15.32%, #1865E2 34.83%, #2135E8 48.77%, #2523EA 55.69%, #3E1FE7 60.19%, #A30EDC 79.22%, #E304D5 92.45%, #FC00D2 98.66%) no-repeat;
+            background-size: 100% 100%;
+            min-height: 100vh;
+        }
+
+        .partner_form {
+            padding-bottom: 2em;
+        }
+
+        .contact_title {
+            text-align: center;
+            align-self: center;
+        }
+
+        .box h2 {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        .box {
+            background-color: #FFFFFF;
+        }
+
+        .contact_btn {
+            color: #FFFFFF;
+            background-color: rebeccapurple;
+        }
+
+        .contact_btn:hover {
+            color: #FFFFFF;
+            background: #183DFF;
+        }
+    </style>
+</head>
+<body>
+<a href="/">
+    <svg width="151" height="169" viewBox="0 0 151 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <title>[Icon] Go Back</title>
+        <g filter="url(#filter0_d)">
+            <circle cx="59.7191" cy="57.7191" r="24.7191" transform="rotate(-180 59.7191 57.7191)" fill="#FAFAFA"/>
+        </g>
+        <path d="M62.5713 50.1133L54.9654 57.177L62.5713 65.325" stroke="#333333" stroke-width="5.70442"
+              stroke-linecap="round"/>
+        <defs>
+            <filter id="filter0_d" x="-31.5516" y="-14.5368" width="182.541" height="182.541"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feOffset dy="19.0147"/>
+                <feGaussianBlur stdDeviation="33.2758"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+        </defs>
+    </svg>
+</a>
+<section class="partner_form">
+    <div class="mdc-layout-grid gp-layout-wrapper">
+        <div class="mdc-layout-grid__inner">
+            <div class="contact_title mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-5-desktop">
+                <img alt="Gump Icon (White Color)" src="/images/gump_white-icon.svg" style="width: 85px; height: 85px;">
+                <h1>Powering People To Make Change, Through Spare Change</h1>
+            </div>
+            <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-7-desktop">
+                <div class="mdc-layout-grid__inner">
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                        <h2>Join the millions who have partnered with #GUMPmovement<br>
+                            By joining the #GUMPchange network</h2>
+                    </div>
+                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                        <h3>First Name</h3>
+                        <span>Enter first name</span>
+                    </div>
+                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                        <h3>Last Name</h3>
+                        <span>Enter last name</span>
+                    </div>
+                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                        <h3>Email</h3>
+                        <span>Enter email adress</span>
+                    </div>
+                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                        <h3>Phone Number</h3>
+                        <span>Enter phone number</span>
+                    </div>
+                    <div class="btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                        <a class="contact_btn" href="">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
