@@ -1,0 +1,94 @@
+header {
+  @media screen and (min-width: 1000px) {
+    background: url("/images/gump-contact.svg") right 18% bottom -39% no-repeat, linear-gradient(25.21deg, #00DED3 4.65%, #09B1D8 15.32%, #1865E2 34.83%, #2135E8 48.77%, #2523EA 55.69%, #3E1FE7 60.19%, #A30EDC 79.22%, #E304D5 92.45%, #FC00D2 98.66%);
+  }
+}
+
+.contact_title {
+  h2 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 36px;
+    max-width: 452px;
+  }
+}
+
+.contact_form {
+  min-height: 500px;
+  margin-top: 0;
+  background: linear-gradient(180deg, #F8F8F8 80%, #fff 0%);
+
+  h3 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .box {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 60px rgba(138, 130, 219, 0.25);
+
+    .box_window {
+      border-bottom: 1px solid #E4E4E4;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.005em;
+      color: #C0C0C0;
+      padding: 2em 0 0.5em;
+    }
+
+    .message {
+      padding-bottom: 7em;
+    }
+
+    @media (max-width: 1023px) {
+      padding: 24px;
+    }
+  }
+
+  .btn {
+    margin: 2em 0;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 4em;
+    .box {
+      padding: 54px;
+    }
+
+  }
+}
+
+.contact-us {
+  text-align: center;
+
+  h2 {
+    margin: 0;
+  }
+
+  a {
+    font-size: 20px;
+    line-height: 60px;
+    font-weight: 700;
+
+    &:hover {
+      color: rebeccapurple;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    min-height: 614px;
+
+    .contact_title {
+      margin-top: 5em;
+    }
+  }
+}
