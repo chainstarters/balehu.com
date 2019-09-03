@@ -132,35 +132,81 @@
                 <p>Feel free to reach us, we will get back to you as soon as possible</p>
             </div>
             <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-8-desktop">
-                <div class="mdc-layout-grid__inner">
+                <form class="mdc-layout-grid__inner" id="contactForm">
                     <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <label class="" for="firstName">First Name</label>
-                        <input type="text" name="firstname" placeholder="Enter first name">
+                        <input type="text" id="firstName" name="firstname" placeholder="Enter first name">
                     </div>
                     <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <label class="" for="lastName">First Name</label>
-                        <input type="text" name="lastname" placeholder="Enter last name">
+                        <input type="text" id="lastName" name="lastname" placeholder="Enter last name">
                     </div>
                     <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <label class="" for="email">Email</label>
-                        <input type="email" name="emailaddress" placeholder="Enter email address">
+                        <input type="email" id="email" name="emailaddress" placeholder="Enter email address">
                     </div>
                     <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <label class="" for="phone">Phone Number</label>
-                        <input type="tel" name="phone" placeholder="Enter phone number">
+                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
                     </div>
                     <div class="box_window message mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                         <label class="" for="message">Message</label>
-                        <textarea id="message" placeholder="Enter message" rows="7"></textarea>
+                        <textarea id="message" id="message" placeholder="Enter message" rows="7"></textarea>
                     </div>
                     <div class="btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                        <a class="contact_btn" href="">Submit</a>
+                        <button class="button contact_btn" id="submitBtn">Submit</button>
+                        <p id="resultMessage" style="display:block">Message successfuly sent.</p>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </section>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const URL = "https://xdyzal23wj.execute-api.us-east-1.amazonaws.com/default/contact-us";
+
+    const data = {
+      type: "contactUs",
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value,
+    }
+
+
+    const submitBtn = document.getElementById("submitBtn");
+    const resultMsg = document.getElementById("resultMessage");
+    submitBtn.textContent = "Sending...";
+    submitBtn.setAttribute("disabled", true);
+
+    console.log(URL, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    /*
+      .then(r => r.json()).then(resp => {
+      submitBtn.textContent = "Submit";
+      submitBtn.removeAttribute("disabled");
+      resultMsg.innerText = "Message sent successfully";
+      resultMsg.style.display = "block";
+    }).catch(err => {
+      console.error(err);
+      submitBtn.textContent = "Submit";
+      submitBtn.removeAttribute("disabled");
+      const response = "Network error";
+      resultMsg.innerText = response;
+      resultMsg.style.display = "block";
+    });
+    */
+  });
+</script>
 <section class="contact-us">
     <div class="mdc-layout-grid gp-layout-wrapper">
         <div class="mdc-layout-grid__inner">
