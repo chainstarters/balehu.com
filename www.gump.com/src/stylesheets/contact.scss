@@ -47,6 +47,11 @@ header {
     overflow: auto;
   }
 
+  textarea:focus, input:focus {
+    color: black;
+  }
+
+
 
   .box_window {
     border-bottom: 1px solid #E4E4E4;
