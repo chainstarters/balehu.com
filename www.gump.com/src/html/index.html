@@ -160,6 +160,10 @@
                         </li>
                         <li><img src="../images/slider/slider_05.png" alt="screenshot from balehu mobile application">
                         </li>
+                        <li><img src="../images/slider/slider_06.png" alt="screenshot from balehu mobile application">
+                        </li>
+                        <li><img src="../images/slider/slider_07.png" alt="screenshot from balehu mobile application">
+                        </li>
                     </ul>
             </div>
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet">
@@ -309,13 +313,8 @@
             navPosition: "bottom",
             autoplayPosition: "bottom",
             controls: false,
-            "autoplayText": ["▶", "❚❚"]
-        });
-
-        //initialize revenue calculator
-        var revenueOutputElm = document.getElementById("revenue-output");
-        document.getElementById("revenue-input").addEventListener("input", function () {
-            revenueOutputElm.innerText = Math.round((this.value * 3.25) * .75) / 100;
+            "autoplayText": ["▶", "❚❚"],
+            autoplayButtonOutput: false,
         });
     });
 </script>

@@ -88,7 +88,7 @@
                 <h1>Powering People To Make Change, Through Spare Change</h1>
             </div>
             <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-7-desktop">
-                <div class="mdc-layout-grid__inner">
+                <form class="mdc-layout-grid__inner" id="contactForm">
 
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                         <h2>Join the millions who have partnered with #GUMPmovement<br>
@@ -96,29 +96,71 @@
                     </div>
                     <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <label class="" for="firstName">First Name</label>
-                        <input type="text" name="firstname" placeholder="Enter first name">
+                        <input type="text" id="firstName" name="firstname" placeholder="Enter first name" required>
                     </div>
-                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6" required>
                         <label class="" for="lastName">First Name</label>
-                        <input type="text" name="lastname" placeholder="Enter last name">
+                        <input type="text" id="lastName" name="lastname" placeholder="Enter last name" required>
                     </div>
-                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                    <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6" required>
                         <label class="" for="email">Email</label>
-                        <input type="email" name="emailaddress" placeholder="Enter email address">
+                        <input type="email" id="email" name="emailaddress" placeholder="Enter email address" required>
                     </div>
                     <div class="box_window mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <label class="" for="phone">Phone Number</label>
-                        <input type="tel" name="phone" placeholder="Enter phone number">
+                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
                     </div>
                     <div class="btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                         <button class="button contact_btn" id="submitBtn">Get Started</button>
-                        <p id="resultMessage" style="display:block">Message successfuly sent.</p>
+                        <p id="resultMessage" style="display:none">Message successfuly sent.</p>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </section>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const URL = "https://xdyzal23wj.execute-api.us-east-1.amazonaws.com/default/contact-gump";
+
+    const data = {
+      type: "requestDemo",
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+    }
+
+
+    const submitBtn = document.getElementById("submitBtn");
+    const resultMsg = document.getElementById("resultMessage");
+    submitBtn.textContent = "Sending...";
+    submitBtn.setAttribute("disabled", true);
+
+    fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(r => r.json()).then(resp => {
+      submitBtn.textContent = "Submit";
+      submitBtn.removeAttribute("disabled");
+      resultMsg.innerText = "Message sent successfully";
+      resultMsg.style.display = "block";
+    }).catch(err => {
+      console.error(err);
+      submitBtn.textContent = "Submit";
+      submitBtn.removeAttribute("disabled");
+      const response = "Network error";
+      resultMsg.innerText = response;
+      resultMsg.style.display = "block";
+    });
+  });
+</script>
 
 </body>
 </html>
