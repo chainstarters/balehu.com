@@ -5,12 +5,21 @@
       margin-bottom: 0;
     }
   }
-  .icon_bgnd {
+}
+
+.slider {
+  text-align: center;
+  position: relative;
+  &::before {
+    left: -45px;
+    top: -30px;
+    height: 200px;
+    width: 200px;
+    display: block;
+    content: "";
+    position: absolute;
     background: url("/images/gump_icon.png") top left no-repeat;
-    background-size: 40%;
-    background-position-y: -8%;
-    background-position-x: -24%;
-    display: flex;
-    z-index: 2;
+    background-size: 70%;
+    z-index: -1;
   }
 }
